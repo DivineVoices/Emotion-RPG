@@ -5,7 +5,6 @@ using UnityEngine;
 public class TargetGroupModifier : MonoBehaviour
 {
     [SerializeField] CinemachineTargetGroup targetGroup;
-
     public void AddTarget(GameObject npcTarget)
     {
         if (npcTarget == null) return;
