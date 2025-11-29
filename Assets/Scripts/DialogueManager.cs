@@ -17,6 +17,8 @@ public class DialogueManager : MonoBehaviour
     [Header("Typing Settings")]
     [SerializeField] float textSpeed = 0.03f;
 
+    [SerializeField] DialogueActionHandler actionHandler;
+
     DialogueBlock currentBlock;
     int currentLine = 0;
     bool isTyping = false;
@@ -95,10 +97,24 @@ public class DialogueManager : MonoBehaviour
 
             btn.onClick.AddListener(() =>
             {
+                if (!string.IsNullOrEmpty(c.actionName))
+                {
+                    // Use reflection to call the method
+                    var method = actionHandler.GetType().GetMethod(c.actionName);
+                    if (method != null)
+                    {
+                        if (string.IsNullOrEmpty(c.actionParameter))
+                            method.Invoke(actionHandler, null);
+                        else
+                            method.Invoke(actionHandler, new object[] { c.actionParameter });
+                    }
+                }
+
                 ClearChoices();
                 StartDialogue(c.nextBlock);
             });
         }
+        
     }
 
     void ClearChoices()

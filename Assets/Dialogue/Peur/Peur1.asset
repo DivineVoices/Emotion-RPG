@@ -14,8 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueBlock
   lines:
   - Bonjour, je suis peur
+  - Hell yeah
   choices:
   - text: Cool
     nextBlock: {fileID: 11400000, guid: 4b9ee1538f2fc3a4b9bb8ae095fc7c65, type: 2}
+    actionName: ShakeCam
+    actionParameter: 
   - text: TG
     nextBlock: {fileID: 11400000, guid: 18865e8de77028c45be2fb4344dc2efb, type: 2}
+    actionName: ShakeCam
+    actionParameter: 
