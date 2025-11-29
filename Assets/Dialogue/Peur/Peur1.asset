@@ -26,5 +26,5 @@ MonoBehaviour:
     actionParameter: Topaz
   - text: Gain Gem
     nextBlock: {fileID: 11400000, guid: 18865e8de77028c45be2fb4344dc2efb, type: 2}
-    actionName: UpgradeGem
+    actionName: AddGem
     actionParameter: Topaz
