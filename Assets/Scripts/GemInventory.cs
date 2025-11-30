@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class GemInventory
+public static class GemInventory
 {
     public static Dictionary<GemType, GemLevel> gemsOwned = new Dictionary<GemType, GemLevel>();
     public static GemType firstGemType = GemType.None;

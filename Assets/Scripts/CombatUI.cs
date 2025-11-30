@@ -25,17 +25,9 @@ public class AttackSystem : MonoBehaviour
             totalLevel += GemInventory.GetGemLevelIndex(GemInventory.thirdGemType);
         }
         for (int i = 0; i < totalLevel; i++) 
-        { 
+        {
             Instantiate(buttonPrefab.GetComponent<Button>(), gridParent);
         }
-    }
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void Attack(GemType type, GemLevel level, EmotionGaugeManager gaugeManager)
