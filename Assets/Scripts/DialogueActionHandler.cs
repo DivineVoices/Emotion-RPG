@@ -3,6 +3,7 @@ using UnityEngine;
 public class DialogueActionHandler : MonoBehaviour
 {
     [SerializeField] CameraShake cameraShakeRef;
+    [SerializeField] GemModifier gemModifRef;
 
     public void GiveItem(string itemName)
     {
@@ -15,6 +16,31 @@ public class DialogueActionHandler : MonoBehaviour
         Debug.Log("Screen Shaking");
         cameraShakeRef.TriggerShake();
     }
+
+    public void AddGem(string gem)
+    {
+        GemType gemConverted = GemTypeConverter.FromString(gem);
+        gemModifRef.AddGemToInventory(gemConverted);
+    }
+
+    public void UpgradeGem(string gem)
+    {
+        GemType gemConverted = GemTypeConverter.FromString(gem);
+        gemModifRef.UpgradeGem(gemConverted);
+    }
+
+    public void IsRightGemLevel(string gem)
+    {
+        GemType gemConverted = GemTypeConverter.FromString(gem);
+        Debug.Log(GemChecker.HasEquippedGem(gemConverted));
+    }
+
+    public void EquipGem(string gem)
+    {
+        GemType gemConverted = GemTypeConverter.FromString(gem);
+        gemModifRef.ChangeGem(gemConverted);
+    }
+
 
     public void StartQuest(string questId)
     {

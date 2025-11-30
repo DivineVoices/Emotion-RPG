@@ -16,11 +16,19 @@ MonoBehaviour:
   - Bonjour, je suis peur
   - Hell yeah
   choices:
-  - text: Cool
+  - text: Check Gem Level
     nextBlock: {fileID: 11400000, guid: 4b9ee1538f2fc3a4b9bb8ae095fc7c65, type: 2}
-    actionName: ShakeCam
-    actionParameter: 
-  - text: TG
+    actionName: IsRightGemLevel
+    actionParameter: Topaz
+  - text: Equip Gem
     nextBlock: {fileID: 11400000, guid: 18865e8de77028c45be2fb4344dc2efb, type: 2}
-    actionName: ShakeCam
-    actionParameter: 
+    actionName: EquipGem
+    actionParameter: Topaz
+  - text: Upgrade Gem
+    nextBlock: {fileID: 11400000, guid: 18865e8de77028c45be2fb4344dc2efb, type: 2}
+    actionName: UpgradeGem
+    actionParameter: Topaz
+  - text: Gain Gem
+    nextBlock: {fileID: 11400000, guid: 18865e8de77028c45be2fb4344dc2efb, type: 2}
+    actionName: AddGem
+    actionParameter: Topaz
