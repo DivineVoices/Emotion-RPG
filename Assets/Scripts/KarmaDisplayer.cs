@@ -11,6 +11,11 @@ public class KarmaDisplayer : MonoBehaviour
         textSpot.text = Karma.karmaGauge.ToString();
     }
 
+    public void ModifKarma(int karma)
+    {
+        Karma.karmaGauge += karma;
+    }
+
     public void ClearKarmaDisplay()
     {
         textSpot.gameObject.SetActive(false);
