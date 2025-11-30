@@ -31,6 +31,14 @@ MonoBehaviour:
       intParam: 0
       floatParam: 0
       boolParam: 0
+  - text: Upgrade Gem
+    nextBlock: {fileID: 11400000, guid: e3b9e5331dde1be4585b9e5c006b938c, type: 2}
+    actionName: 
+    parameters:
+      stringParam: 
+      intParam: 0
+      floatParam: 0
+      boolParam: 0
   - text: Exit
     nextBlock: {fileID: 11400000, guid: ecf944e9864afa14cbff6c66e93fc7ee, type: 2}
     actionName: 
