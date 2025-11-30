@@ -17,6 +17,22 @@ public class GemInventory
             return gemsOwned[gemType];
         return GemLevel.None;
     }
+    public static int GetGemLevelIndex(GemType gemType)
+    {
+        switch (GetGemLevel(gemType))
+        {
+            case GemLevel.Level1:
+                return 1;
+            case GemLevel.Level2:
+                return 2;
+            case GemLevel.Level3:
+                return 3;
+            default:
+                return 0;
+        }
+        ;
+    }
+
 
     public static bool HasGem(GemType gemType)
     {
@@ -71,7 +87,7 @@ public static class GemExtensions
         return GemChecker.HasEquippedGem(gemType, minLevel);
     }
 
-    public static int EquippedCount(this GemType gemType, GemLevel minLevel = GemLevel.Level1)
+    public static int EquippedCount()
     {
         return GemChecker.CountEquippedGems();
     }
