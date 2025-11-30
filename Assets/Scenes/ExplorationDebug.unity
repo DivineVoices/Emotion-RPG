@@ -1467,15 +1467,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3047776580077037811, guid: ce0e911a710cf9949b258602a6050bd6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -401.41202
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3047776580077037811, guid: ce0e911a710cf9949b258602a6050bd6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -220.08978
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3047776580077037811, guid: ce0e911a710cf9949b258602a6050bd6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5688125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3047776580077037811, guid: ce0e911a710cf9949b258602a6050bd6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1918,7 +1918,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1656849212}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -1945,7 +1945,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1656849212}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2293,6 +2293,11 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1465784189078107082, guid: 89cff01799fb7fa4a855f54e4ef6f482, type: 3}
   m_PrefabInstance: {fileID: 1633934142}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1656849212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4296970994106580496, guid: ce0e911a710cf9949b258602a6050bd6, type: 3}
+  m_PrefabInstance: {fileID: 1252037629}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1667557985
 GameObject:
