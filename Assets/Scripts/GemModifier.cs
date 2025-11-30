@@ -16,12 +16,15 @@ public class GemModifier : MonoBehaviour
         {
             case 0:
                 GemInventory.firstGemType = gemType;
+                Debug.Log("Sucessfully Set");
                 break;
             case 1:
                 GemInventory.secondGemType = gemType;
+                Debug.Log("Sucessfully Set");
                 break;
             case 2:
                 GemInventory.thirdGemType = gemType;
+                Debug.Log("Sucessfully Set");
                 break;
         }
     }
@@ -60,6 +63,7 @@ public class GemModifier : MonoBehaviour
             GemLevel currentLevel = GemInventory.gemsOwned[gemType];
             if ((int)level > (int)currentLevel)
             {
+                Debug.Log("Gem added");
                 GemInventory.gemsOwned[gemType] = level;
             }
         }
