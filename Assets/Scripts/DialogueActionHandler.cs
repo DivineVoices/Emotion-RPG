@@ -88,4 +88,9 @@ public class DialogueActionHandler : MonoBehaviour
         string sceneName = parameters.stringParam;
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
+
+    public void PunchSFX(DialogueActionParams parameters)
+    {
+        AudioManager.Instance.PlaySound("Punch");
+    }
 }
