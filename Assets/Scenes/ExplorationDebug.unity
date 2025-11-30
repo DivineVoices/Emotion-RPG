@@ -290,8 +290,8 @@ MonoBehaviour:
   _rigidbody: {fileID: 28540373}
   _interactSphere: {fileID: 28540374}
   moveSpeed: 3
-  _MoveInput: {fileID: 0}
-  _InteractInput: {fileID: 0}
+  _MoveInput: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  _InteractInput: {fileID: 1781555164194001046, guid: 052faaac586de48259a63d0c4782560b, type: 3}
 --- !u!1 &107394427
 GameObject:
   m_ObjectHideFlags: 0

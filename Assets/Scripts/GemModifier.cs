@@ -30,9 +30,9 @@ public class GemModifier : MonoBehaviour
     {
         if (!GemInventory.gemsOwned.ContainsKey(gemType))
             return;
-
         GemLevel currentLevel = GemInventory.gemsOwned[gemType];
         GemLevel upgradedLevel = GetNextTier(currentLevel);
+        
 
         if (upgradedLevel != GemLevel.None)
         {

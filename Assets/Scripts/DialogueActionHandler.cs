@@ -35,6 +35,13 @@ public class DialogueActionHandler : MonoBehaviour
         Debug.Log(GemChecker.HasEquippedGem(gemConverted));
     }
 
+    public void EquipGem(string gem)
+    {
+        GemType gemConverted = GemTypeConverter.FromString(gem);
+        gemModifRef.ChangeGem(gemConverted);
+    }
+
+
     public void StartQuest(string questId)
     {
         // Your quest starting logic here
