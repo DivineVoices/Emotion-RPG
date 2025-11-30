@@ -305,6 +305,7 @@ Transform:
   - {fileID: 1837329943}
   - {fileID: 1345962556}
   - {fileID: 2107060381}
+  - {fileID: 733001520}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &165452176
@@ -554,6 +555,7 @@ MonoBehaviour:
   gridParent: {fileID: 197859779}
   attackButtons: []
   emotionGauge: {fileID: 575858605}
+  sceneSwitcher: {fileID: 733001521}
 --- !u!1 &272016481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,6 +1021,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575858603}
   m_CullTransparentMesh: 1
+--- !u!1 &733001519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 733001520}
+  - component: {fileID: 733001521}
+  m_Layer: 0
+  m_Name: SceneSwitcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &733001520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733001519}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.28067, y: 0, z: 11.97319}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 107394428}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &733001521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733001519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f04bad30e51bc0e42bcd019c3eeea509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &826814752
 GameObject:
   m_ObjectHideFlags: 0
@@ -2553,6 +2599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2088018751}
   - component: {fileID: 2088018752}
+  - component: {fileID: 2088018753}
   m_Layer: 5
   m_Name: EmpathyUI
   m_TagString: Untagged
@@ -2603,6 +2650,23 @@ MonoBehaviour:
   m_Spacing: {x: 25.03, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 3
+--- !u!114 &2088018753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088018750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f44d8b080538047489fe40a0ade7f1ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonPrefab: {fileID: 348972560349188991, guid: 397f1c3ee9cd3294394854e69808855b, type: 3}
+  gridParent: {fileID: 2088018751}
+  dialogueButtons: []
+  emotionGauge: {fileID: 575858605}
+  sceneSwitcher: {fileID: 733001521}
 --- !u!1 &2094260516
 GameObject:
   m_ObjectHideFlags: 0
