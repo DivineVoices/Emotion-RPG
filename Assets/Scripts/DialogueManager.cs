@@ -14,11 +14,12 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] Transform choiceContainer;
     [SerializeField] Button choiceButtonPrefab;
 
+    [Header("Action Handler")]
+    [SerializeField] PlayerMovement playerMovementRef;
+    [SerializeField] DialogueActionHandler actionHandler; // Drag your DialogueActionHandler here in inspector
+
     [Header("Typing Settings")]
     [SerializeField] float textSpeed = 0.03f;
-
-    [SerializeField] DialogueActionHandler actionHandler;
-    [SerializeField] PlayerMovement playerMovementRef;
 
     DialogueBlock currentBlock;
     int currentLine = 0;
@@ -61,7 +62,6 @@ public class DialogueManager : MonoBehaviour
         if (currentBlock.choices.Count > 0)
         {
             ShowChoices();
-            
             return;
         }
 
@@ -100,24 +100,27 @@ public class DialogueManager : MonoBehaviour
 
             btn.onClick.AddListener(() =>
             {
-                if (!string.IsNullOrEmpty(c.actionName))
+                // Execute the action with parameters if specified
+                if (!string.IsNullOrEmpty(c.actionName) && actionHandler != null)
                 {
-                    // Use reflection to call the method
                     var method = actionHandler.GetType().GetMethod(c.actionName);
                     if (method != null)
                     {
-                        if (string.IsNullOrEmpty(c.actionParameter))
-                            method.Invoke(actionHandler, null);
-                        else
-                            method.Invoke(actionHandler, new object[] { c.actionParameter });
+                        method.Invoke(actionHandler, new object[] { c.parameters });
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Method {c.actionName} not found in DialogueActionHandler");
                     }
                 }
 
                 ClearChoices();
-                StartDialogue(c.nextBlock);
+                if (c.nextBlock != null)
+                    StartDialogue(c.nextBlock);
+                else
+                    EndDialogue();
             });
         }
-        
     }
 
     void ClearChoices()

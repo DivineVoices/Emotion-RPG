@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 [CreateAssetMenu(menuName = "Dialogue/Dialogue Block")]
 public class DialogueBlock : ScriptableObject
@@ -13,8 +12,8 @@ public class DialogueBlock : ScriptableObject
     {
         public string text;               // text shown as the choice
         public DialogueBlock nextBlock;   // what this choice leads to
-        public string actionName;         // method name to call
-        public string actionParameter;    // parameter for the method
+        public string actionName;         // Method name to call in DialogueActionHandler
+        public DialogueActionParams parameters; // Parameters for the method
     }
 
     public List<Choice> choices = new List<Choice>();

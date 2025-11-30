@@ -487,7 +487,6 @@ GameObject:
   m_Component:
   - component: {fileID: 197859779}
   - component: {fileID: 197859780}
-  - component: {fileID: 197859781}
   m_Layer: 5
   m_Name: AttackUI
   m_TagString: Untagged
@@ -2125,7 +2124,6 @@ MonoBehaviour:
   cameraShakeRef: {fileID: 1294702564}
   gemModifRef: {fileID: 0}
   sceneSwitcherRef: {fileID: 0}
-  karmaDisplayerRef: {fileID: 0}
 --- !u!1 &1854414666
 GameObject:
   m_ObjectHideFlags: 0

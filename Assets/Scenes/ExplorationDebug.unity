@@ -2207,9 +2207,9 @@ MonoBehaviour:
   textSpot: {fileID: 1052123909}
   choiceContainer: {fileID: 1820561823}
   choiceButtonPrefab: {fileID: 868619702824613169, guid: 0da56b657ba4c1d4dbe5f374f21532b2, type: 3}
-  textSpeed: 0.1
-  actionHandler: {fileID: 1837329944}
   playerMovementRef: {fileID: 28540375}
+  actionHandler: {fileID: 1837329944}
+  textSpeed: 0.1
 --- !u!1 &1782812518
 GameObject:
   m_ObjectHideFlags: 0
