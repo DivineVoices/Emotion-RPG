@@ -5,6 +5,7 @@ public class DialogueActionHandler : MonoBehaviour
     [SerializeField] CameraShake cameraShakeRef;
     [SerializeField] GemModifier gemModifRef;
     [SerializeField] SceneSwitcher sceneSwitcherRef;
+    [SerializeField] KarmaDisplayer karmaDisplayerRef;
 
     public void GiveItem(string itemName)
     {
@@ -16,6 +17,16 @@ public class DialogueActionHandler : MonoBehaviour
     {
         Debug.Log("Screen Shaking");
         cameraShakeRef.TriggerShake();
+    }
+
+    public void KarmaDisplay()
+    {
+        karmaDisplayerRef.DisplayKarma();
+    }
+
+    public void KarmaClear()
+    {
+        karmaDisplayerRef.ClearKarmaDisplay();
     }
 
     public void AddGem(string gem)

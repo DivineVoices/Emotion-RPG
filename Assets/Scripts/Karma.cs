@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Karma : MonoBehaviour
+public class Karma
 {
     public static int karmaGauge;
 }
