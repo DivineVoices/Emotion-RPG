@@ -18,12 +18,24 @@ MonoBehaviour:
   - text: Amethyst
     nextBlock: {fileID: 11400000, guid: c57025875feaf7a4db93e36c566850eb, type: 2}
     actionName: AddGem
-    actionParameter: Amethyst
+    parameters:
+      stringParam: Amethyst
+      intParam: 0
+      floatParam: 0
+      boolParam: 0
   - text: Topaz
     nextBlock: {fileID: 11400000, guid: c57025875feaf7a4db93e36c566850eb, type: 2}
     actionName: AddGem
-    actionParameter: Topaz
+    parameters:
+      stringParam: Topaz
+      intParam: 0
+      floatParam: 0
+      boolParam: 0
   - text: Ruby
     nextBlock: {fileID: 11400000, guid: c57025875feaf7a4db93e36c566850eb, type: 2}
     actionName: AddGem
-    actionParameter: Ruby
+    parameters:
+      stringParam: Ruby
+      intParam: 0
+      floatParam: 0
+      boolParam: 0

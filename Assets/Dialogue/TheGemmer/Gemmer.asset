@@ -18,12 +18,24 @@ MonoBehaviour:
   - text: Gain Gem
     nextBlock: {fileID: 11400000, guid: 117969c0203a5d041a5ef73aee9bb4c3, type: 2}
     actionName: 
-    actionParameter: 
+    parameters:
+      stringParam: 
+      intParam: 0
+      floatParam: 0
+      boolParam: 0
   - text: Equip Gem
     nextBlock: {fileID: 11400000, guid: b9718e0c6b5006f47a279d801ea43b67, type: 2}
     actionName: 
-    actionParameter: 
+    parameters:
+      stringParam: 
+      intParam: 0
+      floatParam: 0
+      boolParam: 0
   - text: Exit
     nextBlock: {fileID: 11400000, guid: ecf944e9864afa14cbff6c66e93fc7ee, type: 2}
     actionName: 
-    actionParameter: 
+    parameters:
+      stringParam: 
+      intParam: 0
+      floatParam: 0
+      boolParam: 0
