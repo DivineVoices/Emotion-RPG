@@ -13,9 +13,5 @@ MonoBehaviour:
   m_Name: Peur-1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueBlock
   lines:
-  - :(
-  choices:
-  - text: Go back
-    nextBlock: {fileID: 11400000, guid: 2ca6d7d92fa7427438b10d5156775603, type: 2}
-    actionName: 
-    actionParameter: 
+  - :D
+  choices: []

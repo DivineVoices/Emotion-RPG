@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] float textSpeed = 0.03f;
 
     [SerializeField] DialogueActionHandler actionHandler;
+    [SerializeField] PlayerMovement playerMovementRef;
 
     DialogueBlock currentBlock;
     int currentLine = 0;
@@ -60,9 +61,11 @@ public class DialogueManager : MonoBehaviour
         if (currentBlock.choices.Count > 0)
         {
             ShowChoices();
+            
             return;
         }
 
+        playerMovementRef.isInteracting = false;
         EndDialogue();
     }
 
