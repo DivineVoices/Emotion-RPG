@@ -11,6 +11,7 @@ public class AttackSystem : MonoBehaviour
 
     [Header("Runtime Data")]
     [SerializeField] private List<Button> attackButtons = new List<Button>();
+    [SerializeField] private Image emotionGauge;
 
     private int totalLevel = 0;
     private int gemCount = 0;
@@ -78,11 +79,21 @@ public class AttackSystem : MonoBehaviour
 
     public void Attack(GemType type, GemLevel level, EmotionGaugeManager gaugeManager)
     {
+        // Calculate the amount of emotion gain (or loss)
         int emotionGain = CalculateEmotionGain(type, level);
 
-        gaugeManager.EmotionGauge += emotionGain;
-        Debug.Log($"ATTACK used: {type} (Level {level}) | +{emotionGain} gauge");
+        // Update the gauge: subtract the gain (if it's a negative effect, this will decrease the gauge)
+        gaugeManager.EmotionGauge -= emotionGain;
+
+        // Ensure the EmotionGauge stays within the 0 to 100 range
+        gaugeManager.EmotionGauge = Mathf.Clamp(gaugeManager.EmotionGauge, 0, 100);
+
+        // Update the fillAmount of the Emotion Gauge Image, making sure it's in the [0, 1] range
+        emotionGauge.fillAmount = gaugeManager.EmotionGauge / 100f;  // Ensure division is by 100f (float division)
+
+        Karma.karmaGauge += emotionGain;
     }
+
 
     private int CalculateEmotionGain(GemType type, GemLevel level)
     {
