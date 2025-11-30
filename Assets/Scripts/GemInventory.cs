@@ -41,12 +41,12 @@ public static class GemChecker
                (GemInventory.thirdGemType == gemType && GetEquippedGemLevel(2) == exactLevel);
     }
 
-    public static int CountEquippedGems(GemType gemType, GemLevel minLevel = GemLevel.Level1)
+    public static int CountEquippedGems()
     {
         int count = 0;
-        if (GemInventory.firstGemType == gemType && GetEquippedGemLevel(0) >= minLevel) count++;
-        if (GemInventory.secondGemType == gemType && GetEquippedGemLevel(1) >= minLevel) count++;
-        if (GemInventory.thirdGemType == gemType && GetEquippedGemLevel(2) >= minLevel) count++;
+        if (GemInventory.firstGemType != GemType.None) count++;
+        if (GemInventory.secondGemType != GemType.None) count++;
+        if (GemInventory.thirdGemType != GemType.None) count++;
         return count;
     }
 
@@ -73,7 +73,7 @@ public static class GemExtensions
 
     public static int EquippedCount(this GemType gemType, GemLevel minLevel = GemLevel.Level1)
     {
-        return GemChecker.CountEquippedGems(gemType, minLevel);
+        return GemChecker.CountEquippedGems();
     }
 }
 
