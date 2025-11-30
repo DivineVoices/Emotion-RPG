@@ -4,6 +4,7 @@ public class DialogueActionHandler : MonoBehaviour
 {
     [SerializeField] CameraShake cameraShakeRef;
     [SerializeField] GemModifier gemModifRef;
+    [SerializeField] SceneSwitcher sceneSwitcherRef;
 
     public void GiveItem(string itemName)
     {
@@ -41,6 +42,10 @@ public class DialogueActionHandler : MonoBehaviour
         gemModifRef.ChangeGem(gemConverted);
     }
 
+    public void EnterFight()
+    {
+        sceneSwitcherRef.SwitchScene("CombatScene");
+    }
 
     public void StartQuest(string questId)
     {

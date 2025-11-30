@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class PlayerInteractSphere : MonoBehaviour
 {
-    //Unfinished while waiting for Crow;
-    [SerializeField] float detectionRange = 50f;
+    [SerializeField] float detectionRange = 4f;
     [SerializeField] CamSwitcher camSwitcherRef;
     [SerializeField] TargetGroupModifier targetGroupRef;
 
@@ -55,8 +54,8 @@ public class PlayerInteractSphere : MonoBehaviour
                     break;
             }
 
-            AudioManager.Instance.StopSound("interact");
-            AudioManager.Instance.PlaySound("interact");
+            //AudioManager.Instance.StopSound("interact");
+            //AudioManager.Instance.PlaySound("interact");
         }
     }
 }

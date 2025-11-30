@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Camera _camera;
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] PlayerInteractSphere _interactSphere;
+    [SerializeField] DialogueManager _dialogueManager;
 
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 3f;
@@ -18,9 +19,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("State Booleans")]
     //private bool isWalking = false;
     //private bool isInCombat = false;
-    //private bool isInteracting = false;
-
-
+    [SerializeField] public bool isInteracting = false;
 
     [Header("Input Action References")]
     [SerializeField] InputActionReference _MoveInput;
@@ -32,9 +31,8 @@ public class PlayerMovement : MonoBehaviour
         _MoveInput.action.performed += OnMove;
         _MoveInput.action.canceled += OnMove;
 
-        //_InteractInput.action.Enable();
-        //_InteractInput.action.performed += OnInteract;
-        //_InteractInput.action.canceled += OnInteract;
+        _InteractInput.action.Enable();
+        _InteractInput.action.started += OnInteract;
 
         _rigidbody = GetComponent<Rigidbody>();
     }
@@ -44,24 +42,26 @@ public class PlayerMovement : MonoBehaviour
         // Movement
         _MoveInput.action.performed -= OnMove;
         _MoveInput.action.canceled -= OnMove;
+
+        _InteractInput.action.started -= OnInteract;
     }
 
     void OnMove(InputAction.CallbackContext context)
     {
         _move = context.ReadValue<Vector2>();
     }
-    //void OnInteract(InputAction.CallbackContext context)
-    //{
-    //    if (!isInteracting)
-    //    {
-    //        isInteracting = true;
-    //        _interactSphere.InteractInRange();
-    //    }
-    //    else
-    //    {
-
-    //    }
-    //}
+    void OnInteract(InputAction.CallbackContext context)
+    {
+        if (!isInteracting)
+        {
+            isInteracting = true;
+            _interactSphere.InteractInRange();
+       }
+        else
+        {
+            _dialogueManager.Advance();
+        }
+    }
 
     public void Update()
     {
