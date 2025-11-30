@@ -101,7 +101,7 @@ public class AttackSystem : MonoBehaviour
     private void SetButtonText(Button button, int index)
     {
         // Get the Text component (for TextMeshPro, use TMP_Text instead)
-        Text buttonText = button.GetComponentInChildren<Text>();  // Assuming Text component is inside button
+        TMP_Text buttonText = button.GetComponentInChildren<TMP_Text>();  // For TextMeshPro
 
         if (buttonText != null)
         {
@@ -110,6 +110,7 @@ public class AttackSystem : MonoBehaviour
 
             // Set the button text to the GemType (e.g. "Topaz")
             buttonText.text = gemType.ToString();  // Displays "Topaz", "Amethyst", or "Ruby"
+            Debug.Log(gemType.ToString());
         }
         else
         {

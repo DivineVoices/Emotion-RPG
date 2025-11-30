@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ExplorationDebug.unity
     guid: dbe47aa71b90c414bbd2e7aa91d98e35
+  - enabled: 0
+    path: Assets/Scenes/CombatDebug.unity
+    guid: dd9fa80d77f6a0c45b84915fd1369e3a
   - enabled: 1
     path: Assets/Scenes/CombatScene.unity
-    guid: dd9fa80d77f6a0c45b84915fd1369e3a
+    guid: 66e53ea79a9546a4db7d4b688b74e0b2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
