@@ -18,9 +18,17 @@ MonoBehaviour:
   choices:
   - text: RIP Bozo
     nextBlock: {fileID: 11400000, guid: 4b9ee1538f2fc3a4b9bb8ae095fc7c65, type: 2}
-    actionName: 
-    actionParameter: 
+    actionName: PunchSFX
+    parameters:
+      stringParam: 
+      intParam: 0
+      floatParam: 0
+      boolParam: 0
   - text: Okay
     nextBlock: {fileID: 11400000, guid: 18865e8de77028c45be2fb4344dc2efb, type: 2}
     actionName: 
-    actionParameter: 
+    parameters:
+      stringParam: 
+      intParam: 0
+      floatParam: 0
+      boolParam: 0
